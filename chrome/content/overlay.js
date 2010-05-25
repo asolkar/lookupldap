@@ -5,11 +5,25 @@ var lookupldap = {
     this.strings = document.getElementById("lookupldap-strings");
   },
 
-  onMsgHdrEmailCommand: function(e) {
-    var promptService = Components.classes["@mozilla.org/embedcomp/prompt-service;1"]
-                                  .getService(Components.interfaces.nsIPromptService);
-    promptService.alert(window, this.strings.getString("helloMessageTitle"),
-                                this.strings.getString("helloMessage"));
+  debugMessage: function (txt) {
+    // if (this.console_debug == true) {
+      Application.console.log ('[Lookup LDAP] ' + txt);
+    // }
+  },
+
+  onMsgHdrEmailCommand: function(emailAddressNode) {
+    this.debugMessage ("Email Address Node: " + emailAddressNode);
+    if (emailAddressNode) {
+      var emailAddress = emailAddressNode.getAttribute("emailAddress");
+      var displayName = emailAddressNode.getAttribute("displayName");
+
+      dump (emailAddressNode);
+
+      this.debugMessage ("Looking up " + emailAddress +
+                          " [" + displayName + "]");
+    } else {
+      this.debugMessage ("Email Address Node seems to be null!");
+    }
   }
 };
 

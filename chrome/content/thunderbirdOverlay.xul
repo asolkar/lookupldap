@@ -9,8 +9,9 @@
   </stringbundleset>
 
   <popup id="emailAddressPopup">
+    <menuseparator/>
     <menuitem id="msg-hdr-email-lookupldap-lookup" label="&lookupldapEmailMenu.label;"
               accesskey="&lookupldapEmailMenu.accesskey;"
-              oncommand="lookupldap.onMsgHdrEmailCommand(event)"/>
+              oncommand="lookupldap.onMsgHdrEmailCommand(document.popupNode)"/>
   </popup>
 </overlay>
