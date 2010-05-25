@@ -1,0 +1,5 @@
+content   lookupldap                 chrome/content/
+skin      lookupldap   classic/1.0   chrome/skin/
+locale    lookupldap   en-US         chrome/locale/en-US/
+overlay	chrome://messenger/content/msgHdrViewOverlay.xul chrome://lookupldap/content/thunderbirdOverlay.xul
+

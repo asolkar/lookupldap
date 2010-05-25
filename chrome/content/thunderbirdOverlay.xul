@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://lookupldap/skin/overlay.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://lookupldap/locale/overlay.dtd">
+<overlay id="lookupldap-overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script src="overlay.js"/>
+  <stringbundleset id="stringbundleset">
+    <stringbundle id="lookupldap-strings" src="chrome://lookupldap/locale/overlay.properties"/>
+  </stringbundleset>
+
+  <popup id="emailAddressPopup">
+    <menuitem id="msg-hdr-email-lookupldap-lookup" label="&lookupldapEmailMenu.label;"
+              accesskey="&lookupldapEmailMenu.accesskey;"
+              oncommand="lookupldap.onMsgHdrEmailCommand(event)"/>
+  </popup>
+</overlay>
